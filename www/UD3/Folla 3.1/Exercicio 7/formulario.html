@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="taboa.php" method="get">
+        <label>Nome e Apelidos: </label><input type="text" name="nome" id="nome"><br>
+        <label>Email: </label><input type="email" name="apelidos" id="email"><br>
+        <label>Experiencia: </label>
+        <input type="checkbox" name="musico" id="checkbox"><label>Músico</label>
+        <input type="checkbox" name="comico" id="checkbox"><label>Cómico</label>
+        <input type="checkbox" name="actor" id="checkbox"><label>Actor</label><br>
+        <label>Indica a túa idade: </label><input type="radio" name="idade" value="Entre 20 e 40 anos" id="radio">Entre 20 e 40 anos<br>
+                            <input type="radio" name="idade" value="Máis de 40 anos" id="radio">Máis de 40 anos<br><br>
+        <label>Como atopaches a páxina: </label>
+        <select name="metodo">
+            <option value="casualidade">de casualidade</option>
+            <option value="Google">polo Google</option>
+            <option value="familia">é coñecida da familia</option>
+        </select><br>
+        <label>Os teus comentarios: </label><br>
+        <textarea name="comentarios" id="comentarios" cols="50" rows="10"></textarea><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>

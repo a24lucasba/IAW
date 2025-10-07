@@ -1,0 +1,15 @@
+.taboa{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+.taboa td, .taboa th{
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+.taboa th{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
