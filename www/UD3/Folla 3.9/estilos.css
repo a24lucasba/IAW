@@ -3,6 +3,7 @@ body {
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #d1dbeb;
+    color: #435570;
 }
 
 .cabeceira {
@@ -23,7 +24,7 @@ body {
     margin: 0;
     padding: 8px;
     font-size: 14px;
-    color: #333;
+    color: #435570;
     border: 1px solid #888;
 }
 
@@ -34,11 +35,6 @@ body {
     background-color: white;
     margin-bottom: 10px;
     box-sizing: border-box;
-}
-
-.input-frase {
-    font-style: italic;
-    color: #666;
 }
 
 .botones-frase, .botones-palabra {
@@ -80,7 +76,7 @@ input[type="submit"]:active {
     margin: 0;
     padding: 8px;
     font-size: 14px;
-    color: #333;
+    color: #435570;
     border: 1px solid #888;
 }
 

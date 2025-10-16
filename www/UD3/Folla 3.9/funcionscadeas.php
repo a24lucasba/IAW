@@ -40,8 +40,49 @@
     </div>
 
     <?php
-        $frase = $_GET['frase'];
-        $palabra = $_GET['palabra'];
+        if (isset($_GET['frase'])){
+            $frase = $_GET['frase'];
+        }else{
+            $frase = "";
+        };
+        if (isset($_GET['palabra'])){
+            $palabra = $_GET['palabra'];
+        }else{
+            $palabra = "";
+        };
+
+        if (isset($_GET['mayuscula'])){
+            echo ucfirst($frase);
+        }elseif(isset($_GET['minuscula'])){
+            echo lcfirst($frase);
+        }elseif(isset($_GET['eliminarEspacios'])){
+            echo str_replace(" ","",$frase);
+        }elseif(isset($_GET['eliminarE'])){
+            $letrasEliminar = array('e','E');
+            echo str_replace($letrasEliminar,"",$frase);
+        }elseif(isset($_GET['puntosAComas'])){
+            echo str_replace('.',",",$frase);
+        }elseif(isset($_GET['buscarPalabra'])){
+            if(str_contains($frase,$palabra)){
+                echo "La palabra '".$palabra."' está en la frase";
+            }else{
+                echo "La palabra '".$palabra."' NO está en la frase";
+            };
+        }elseif(isset($_GET['eliminarPalabra'])){
+            if(str_contains($frase,$palabra)){
+                echo str_replace($palabra,"",$frase);
+            }else{
+                echo "La palabra '".$palabra."' NO está en la frase";
+            };
+        }elseif(isset($_GET['cambiarPalabra'])){
+            if(str_contains($frase,'tardes')){
+                echo str_replace('tardes',"noites",$frase);
+            }else{
+                echo "La palabra 'tardes' NO está en la frase";
+            };
+        }else{
+            echo "<p>Introduce unha frase ou plabara e pulsa un botón</p>";
+        }
     ?>
 </body>
 </html>
