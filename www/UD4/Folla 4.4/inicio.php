@@ -31,7 +31,7 @@ echo "<br><br><form action='produtos.php' method='get'>
 
 if (isset($_GET['parametro'])){
 
-    $consulta = $conexion->prepare("SELECT * FROM productos WHERE familia='".$_GET['familias']."' and id like '".$_GET['parametro']."' or nombre like '".$_GET['parametro']."' or nombre_corto like '".$_GET['parametro']."' or descripcion like '".$_GET['parametro'])."'";
+    $consulta = $conexion->prepare("SELECT * FROM productos WHERE familia='".$_GET['familias']."' and id like '".$_GET['parametro']."' or nombre like '".$_GET['parametro']."' or nombre_corto like '".$_GET['parametro']."' or descripcion like '".$_GET['parametro']."'");
     $consulta->execute();
     $resultado=$consulta->get_result();
     echo "<tr>
