@@ -21,7 +21,7 @@ try {
     $nome = $_GET['usuario'];
     $apelidos = $_GET['apelidos'];
 
-    $pdoStmt2->execute([':codigo'=>$id,'nome'=>$nome,'ape1'=>$apelidos]);
+    $pdoStmt2->execute(params: [':codigo'=>$id,'nome'=>$nome,'ape1'=>$apelidos]);
 
 }
 catch(PDOException $e) {

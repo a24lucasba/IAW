@@ -49,21 +49,28 @@
         <input type="submit" name="filtrar" value="Filtrar"><br><br>
         <input type="text" name="filtroCalquera" placeholder="Buscar por calquera campo">
         <input type="submit" name="filtrarCalquera" value="Filtrar"><br><br>
-        <select name="tipo">
+        <select name="tipos">
             <option value="Zapatilla">Zapatilla</option>
             <option value="Bota">Bota</option>
             <option value="Pantalón">Pantalón</option>
             <option value="Calcetín">Calcetín</option>
             <option value="Chaqueta">Chaqueta</option>
-        </select><br><br>
-        <input type="text" name="engadirProduto" placeholder="Nome do produto a engadir">
-        <input type="submit" name="engadir" value="Engadir produto"><br><br>
-        <input type="text" name="editarProduto" placeholder="Nome do produto a editar">
-        <input type="submit" name="editar" value="Editar produto"><br><br>
-        <input type="text" name="eliminarProduto" placeholder="Nome do produto a eliminar">
-        <input type="submit" name="eliminar" value="Eliminar produto"><br><br>
-    </form>
+        </select>
+		<input type="submit" name="filtrarTipo" value="Filtrar"><br><br>
 
+		<input type="text" name="nome" placeholder="Nome">
+		<input type="text" name="marca" placeholder="Marca">
+		<input type="text" name="tipo" placeholder="Tipo">
+		<input type="number" name="prezo" placeholder="Prezo">
+		<input type="text" name="imaxe" placeholder="Imaxe"><br><br>
+		
+        <input type="submit" name="engadir" value="Engadir produto">
+		<label>(Insertar todos los datos)</label><br><br>
+        <input type="submit" name="editar" value="Editar produto">
+		<label>(Insertar todos los datos)</label><br><br>
+        <input type="submit" name="eliminar" value="Eliminar produto">
+		<label>(Insertar nombre del producto)</label><br><br>
+    </form>
 <article>
 </body>
 </html>
