@@ -9,8 +9,6 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     header("WWW-Authenticate: Basic realm='Contido restrinxido'");
     header("HTTP/1.0 401 Unauthorized");
     $pdo2 = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4",$user,$pass);
-    $pdoStmt2 = $pdo2->query("UPDATE usuariosTempo SET ultimaConexion='$data' WHERE nome=$_SERVER['PHP_AUTH_USER']");
-    $pdoStmt2->execute(); 
     die();
 }
 
@@ -53,7 +51,7 @@ echo "<br><br><form method='get' action='rexistro.php'>
     </form><br>
     <form method='get' action='autenticacion.php'>
         <input type='submit' name='listaUsuarios' value='Ver lista de usuarios y contrasinais'>
-        <input type='submit' name='pechar' value='Pechar lista'>
+        <input type='submit' name='pechar' value='Pechar lizta'>
     </form>";
 
 if (isset($_GET['listaUsuarios'])){
