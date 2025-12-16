@@ -18,7 +18,8 @@ echo session_id();
     ?>
     <h2>Estou na páxina 1b!! </h2>
     <a href='sesion1a.php'>Ir a sesion1a</a>
-    <br>
+    <br><br><br>
+    <a href='pecheSesion.php'>Pechar sesión</a>
 </body>
 
 </html>

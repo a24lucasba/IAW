@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['usuario'])){
+    session_regenerate_id(true);
+    $_SESSION['usuario']= true;
+}
 echo session_id();
 ?>
 <!DOCTYPE html>
