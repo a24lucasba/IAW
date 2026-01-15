@@ -55,7 +55,9 @@ session_start();
         foreach ($xml->query->search->children() as $pax) {
             $params = 'termo=' . $_GET['termo'];
             $params .= '&pax=' . urlencode($pax['title']);
-            echo "<li><a href='?$params'>" . $pax['title'] . "</a></li>";
+            $pageid =(string) $pax['pageid'];
+            $wikiUrl = "https://".$_SESSION['idioma'].".wikipedia.org?curid=$pageid";
+            echo "<li><a href='?$params'>" . $pax['title'] . "</a> | <a href=".$wikiUrl." target=_blank>Abrir en wikipedia</a></li>";
         }
         ?>
         </ul>
@@ -72,8 +74,9 @@ session_start();
             $url .= '&redirects';
             $url .= '&page=' . urlencode($_GET['pax']);
             $paxina = file_get_contents($url);
+            $obxecto = json_decode($paxina);
             echo '<hr> <div>
-<h3>Contido da páxina: ' . $_GET['pax'] . '</h3>';
+            <h3>Contido da páxina: ' . $_GET['pax'] . '</h3>';
             echo htmlspecialchars_decode($paxina);
         }
         echo '</div>';
